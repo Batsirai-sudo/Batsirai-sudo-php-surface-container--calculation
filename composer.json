@@ -1,0 +1,20 @@
+{
+    "name": "batsirai/php-container-surface-calculation",
+    "description": "We want to calculate how many containers of each type we need for a transport.",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Batsirai\\PhpContainerSurfaceCalculation\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Batsirai-sudo",
+            "email": "batsybbay@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {
+        "spatie/ray": "^1.34"
+    }
+}

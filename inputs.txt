@@ -1,0 +1,16 @@
+1 big container: width 300 length 200
+1 small container: width 100 length 100
+
+##1 Transport
+circle: radius 50
+circle: radius 50
+square: width 100 length 100
+
+##2 Transport
+square: width 400 length 400
+circle: radius 100
+
+##3 Transport
+square: width 150 length 100
+square: width 50 length 50
+circle: radius 50
