@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Batsirai\PhpContainerSurfaceCalculation\src\Interfaces;
+namespace Batsirai\PhpContainerSurfaceCalculation\Interfaces;
 
 
 interface CalculationInterface

@@ -4,7 +4,7 @@
 namespace Batsirai\PhpContainerSurfaceCalculation;
 
 
-use ObjectInterface;
+use Batsirai\PhpContainerSurfaceCalculation\Interfaces\ObjectInterface;
 
 class ObjectClass extends Calculation implements ObjectInterface {
 

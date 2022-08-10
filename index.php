@@ -20,15 +20,25 @@ $transports = $processFile->generate(TRANSPORT);
 
 rsort($containers);
 
+ray($containers);
+ray($transports);
 
-$freeEmptySpaceArray = array();
+$data = array();
 
-foreach($transports as $key=> $transport){
+foreach($transports as $key => $transport){
 
-    foreach($containers as $container){
-        $track = 1;
-        ray($container->capacity/$transport->totalLoad);
+    foreach($containers as $key2 => $container){
+//        $track = 1;
+//        if()
+        $multiplier = $transport->totalLoad/$container->capacity;
+//        ray()
+        $data[$key][$key2] = [
+            "transaport" => $transport->name,
+            "containers" => $multiplier,
+            "freeSpace" => intval(($multiplier * $container->capacity))
+        ];
 
     }
 }
+ray($data);
 

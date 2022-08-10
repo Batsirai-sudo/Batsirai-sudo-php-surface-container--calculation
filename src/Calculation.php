@@ -4,7 +4,7 @@
 namespace Batsirai\PhpContainerSurfaceCalculation;
 
 
-use Batsirai\PhpContainerSurfaceCalculation\src\Interfaces\CalculationInterface;
+use Batsirai\PhpContainerSurfaceCalculation\Interfaces\CalculationInterface;
 use Batsirai\PhpContainerSurfaceCalculation\Traits\Formulas;
 
 class Calculation implements CalculationInterface {
