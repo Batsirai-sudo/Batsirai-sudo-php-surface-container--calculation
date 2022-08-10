@@ -28,10 +28,11 @@ $data = array();
 foreach($transports as $key => $transport){
 
     foreach($containers as $key2 => $container){
-//        $track = 1;
-//        if()
+
+
         $multiplier = $transport->totalLoad/$container->capacity;
-//        ray()
+
+
         $data[$key][$key2] = [
             "transaport" => $transport->name,
             "containers" => $multiplier,
@@ -40,5 +41,4 @@ foreach($transports as $key => $transport){
 
     }
 }
-ray($data);
 
