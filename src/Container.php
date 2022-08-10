@@ -37,7 +37,7 @@ class Container{
 
     protected int $length;
     protected int $width;
-    protected string $type;
+    public string $type;
     public int $capacity;
     /**
      * @var Calculation

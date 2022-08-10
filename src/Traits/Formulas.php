@@ -26,7 +26,7 @@ trait Formulas
     }
 
     public function execute($values){
-        $count = 0;
+
         $tempArray = array();
         $currentOperator = '';
         $sum = 0;
@@ -41,7 +41,7 @@ trait Formulas
 
                    $operator = [...$result][0];
 
-                   $sum = $this->{$operator['func']}( (int) $tempArray[0] ,(int)$tempArray[1]);
+                   $sum = $this->{$operator['func']}( (float) $tempArray[0] ,(float)$tempArray[1]);
 
                     $currentOperator = '';
 

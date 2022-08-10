@@ -6,11 +6,13 @@ define('CONTAINERS','Containers');
 define('TRANSPORT','Transport');
 define('SHAPE_FORMULAS',[
     "square" => 'width * length',
-    "circle" => 'radius * radius * 4',
+    "conatiner" => 'width * length',
+    "circle" => 'radius * radius * 3.14',
 ]);
 
 require_once ROOT.'vendor/autoload.php';
 
+use Batsirai\PhpContainerSurfaceCalculation\Calculation;
 use Batsirai\PhpContainerSurfaceCalculation\ProcessFile;
 
 $processFile = ProcessFile::getInstance('inputs.txt');
@@ -18,27 +20,9 @@ $processFile = ProcessFile::getInstance('inputs.txt');
 $containers = $processFile->generate(CONTAINERS);
 $transports = $processFile->generate(TRANSPORT);
 
-rsort($containers);
+$calculation = new Calculation();
 
-ray($containers);
-ray($transports);
-
-$data = array();
-
-foreach($transports as $key => $transport){
-
-    foreach($containers as $key2 => $container){
+var_dump($calculation->getResults($containers,$transports));
 
 
-        $multiplier = $transport->totalLoad/$container->capacity;
-
-
-        $data[$key][$key2] = [
-            "transaport" => $transport->name,
-            "containers" => $multiplier,
-            "freeSpace" => intval(($multiplier * $container->capacity))
-        ];
-
-    }
-}
 
